@@ -1,0 +1,35 @@
+
+body {
+    background-color: white;
+    color: black;
+    background-color: aqua;
+  }
+  
+  header {
+    display: flex;
+    font-size: 2em;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Impact;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(37, 40, 231);
+    height:  150px;
+  
+    
+  
+    
+  }
+  
+  main {
+    color: black;
+    width: 80%;
+    font-size: large;
+    margin: auto;
+  }
+  
+ 
+  
+
+  

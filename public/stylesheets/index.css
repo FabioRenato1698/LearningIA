@@ -1,0 +1,53 @@
+
+body {
+  background-color: white;
+  color: black;
+  background-color: aqua;
+}
+
+header {
+  display: flex;
+  font-size: 2em;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: Impact;
+  font-weight: bold;
+  color: white;
+  background-color: rgb(37, 40, 231);
+  height:  150px;
+
+  
+
+  
+}
+
+main {
+  color: black;
+  width: 80%;
+  font-size: large;
+  margin: auto;
+}
+
+nav {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+nav a {
+  color: white;
+  text-decoration: underline;
+}
+
+nav > section {
+  margin:15px;
+  width: 30%;
+  min-width: 100px;
+  height: 150px;
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+  background-color: blue;
+}
