@@ -6,19 +6,35 @@ body {
 }
 
 header {
-  display: flex;
+  background-color: rgb(9, 11, 143);
+  color: white;
   font-size: 2em;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   font-family: Impact;
   font-weight: bold;
-  color: white;
-  background-color: rgb(37, 40, 231);
-  height:  150px;
+  padding:15px;
+  margin: 0;
+  vertical-align: middle; 
+  height: 130px;
 
+
+}
+
+header img {
+  width: 170px;
+  height: 130px;
+  float:left;
+  display: inline-block;
   
+}
 
+
+
+header > h1 {
+  padding:0;
+  margin:15px;
+  width: calc( 100% - 200px);
+  text-align: center;
+  display: inline-block;
   
 }
 
@@ -34,6 +50,7 @@ nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  margin-top: 70px;
 }
 
 nav a {
@@ -49,5 +66,23 @@ nav > section {
   text-align: center;
   vertical-align: middle;
   color: white;
-  background-color: blue;
+  background-color:rgb(9, 11, 143);
+  margin-bottom: 70px;
+}
+
+
+footer {
+  margin-top: 100px;
+  height: 100px;
+background-color: rgb(9, 11, 143);
+}
+
+footer > table{
+  margin-left:550px;
+  
+}
+
+footer table a{
+	text-decoration: none;
+	color:black;
 }

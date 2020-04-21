@@ -1,22 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
     <title>LearningIA</title>
     <link rel="stylesheet" href="stylesheets/Genetica.css">
 </head>
-<body>
-    <header><h1>Algoritmos Genéticos</h1> </header>
- <main>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at velit tortor. Nullam varius purus mauris, eget lacinia magna feugiat in. Mauris magna est, ornare a semper sit amet, feugiat vel nibh. Proin tempor quis dolor eget iaculis. 
-    </p>
-    <p>Maecenas et elit elit. Duis eget congue risus. Nam iaculis orci velit, quis rutrum nunc eleifend ac.
-    </p>
-    <p>Fusce at nisi nisl. Suspendisse velit ipsum, scelerisque sit amet viverra in, pellentesque ut nunc. Fusce eget rutrum nunc. In ac vehicula neque. Aliquam a euismod lacus. Morbi ac sollicitudin velit. Cras accumsan odio in ante varius tempus sit amet nec sapien.
-</p>
-<p>Aenean vehicula ultrices mi quis fermentum. Donec mollis in massa id condimentum. Ut tincidunt eget eros vel euismod. Sed id hendrerit dolor, ut varius arcu. 
-</p> 
-</main>
 
- 
- </body>
+<body>
+    <header>
+        <h1>Algoritmos Genéticos</h1>
+    </header>
+    <main>
+        <p>Os <b>Algoritmos Genéticos</b> englobam métodos e técnicas computacionais inspiradas na teoria da evolução das
+            espécies(seleção natural de Darwin), a computação se inspira constantemente na biologia. Algoritmos
+            Genéticos é mais uma dessas inspirações.
+        </p>
+        <h2>Seleção natural de Darwin</h2>
+        <table> 
+         <tr><td>Hereditariedade</td><td>Deve haver um processo em que os filhos recebem as propriedades dos seus pais</td></tr>
+         <tr><td>Variação</td><td>Deve haver uma variedade de características presentes na população ou um meio para introduzir variações</td></tr>
+         <tr><td>Seleção</td><td>Deve haver um mecanismo na qual alguns membros da população têm a oportunidade de ser pais e passar a sua informação genética</td></tr>
+        </table>
+        <hgroup>
+            <h2>Então para implementarmos um Algoritmo Genético é necessário:</h2>
+            <h2>
+             <ol>
+                <li>Criar uma população aleatória de N elementos</li>
+                <li>Calcular a fitness dos N elementos</li>
+                <li>Reprodução/Seleção:</li>
+                <ol type="A">
+                     <li>Escolher dois "Parents"</li>
+                     <li>Gerar um novo elemento</li>
+                       <ul>
+                           <li>Crossover</li>
+                           <li>Mutação</li>
+                       </ul>
+                </ol>     
+              </ol>
+              <p>O Problema do Macaco Shakespearean <br/>A frase alvo é:<b>"I HATE PROGRAMMING"</b></p>
+            </h2>
+        </hgroup>
+        
+    </main>
+
+
+    <script src="./javascripts/DNA.js"></script>
+    <script src="./javascripts/Populacao.js"></script>
+    <script src="./javascripts/sketch.js"></script>
+
+
+</body>
+
 </html>

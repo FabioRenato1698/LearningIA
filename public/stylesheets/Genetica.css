@@ -14,7 +14,7 @@ body {
     font-family: Impact;
     font-weight: bold;
     color: white;
-    background-color: rgb(37, 40, 231);
+    background-color: rgb(9, 11, 143);
     height:  150px;
   
     
@@ -29,7 +29,53 @@ body {
     margin: auto;
   }
   
+  main > hgroup > h3 {
+    font-size: 15px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+
+
+ }
+
+ main > hgroup > h2 > p {
+   text-align: center;
+   background-color: rgb(9, 11, 143);
+   color: white;
+}
  
+
+ .stats, .all, .best {
+  font-family: "Courier";
+}
+
+.best {
+  font-size: 2em;
+  color: red;
+  background-color: black;
+}
+
+.stats {
+  font-size: 30;
+  background-color: black;
+  color: white;
+  
+}
+.all {
+  color: blue;
+  background-color: white;
+} 
+
+table > tr, td {
+  border: 1px solid black;
+  border-spacing: 0px;
+  padding: 10px;
+
+
+} 
+
+
+
+
   
 
   
