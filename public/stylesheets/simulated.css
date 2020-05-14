@@ -1,0 +1,52 @@
+body {
+    background-color: white;
+    color: black;
+    background-color: aqua;
+}
+  
+header {
+    display: flex;
+    font-size: 2em;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Impact;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(9, 11, 143);
+    height:  150px;
+  
+    
+  
+    
+}
+
+div.container       { width: 640px; margin: 0 auto; padding-top: 15px; }
+div.board_container { float: left; }
+table.board         { border: solid 1px black; margin: 0 auto; }
+td                  { width: 3pc; height: 3pc; }
+td img              { margin-left: auto; margin-right: auto; display: block; }
+td.white_square     { background-color: white; }
+td.black_square     { background-color: black; }
+input               { border: solid 1px black; margin: 0 auto; display: block; }
+div.controls        { float: right;}
+.bordered           { border: solid 1px black; margin: 0 auto; display: block; }
+div#console         { padding-top: 20px; text-align: center; clear: both;}
+div#graph           { clear: both; }
+
+
+main > h2 {
+    text-align: center;
+    background-color: rgb(9, 11, 143);
+    color: white;
+} 
+
+
+main > p {
+    font-size: 15px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+ 
