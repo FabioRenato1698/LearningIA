@@ -105,7 +105,7 @@ class Population {
     allPhrases() {
       let everything = "";
   
-      let displayLimit = min(this.population.length, 15);
+      let displayLimit = min(this.population.length, 18);
   
   
       for (let i = 0; i < displayLimit; i++) {

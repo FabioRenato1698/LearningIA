@@ -9,19 +9,19 @@ let stats;
 
 function setup() {
     bestPhrase = createP("Best phrase:");
-    bestPhrase.position(370,850);
+    bestPhrase.position(550,1130);
     bestPhrase.class("best");
 
     allPhrases = createP("All phrases:");
-    allPhrases.position(620, 950);
+    allPhrases.position(980, 1100);
     allPhrases.class("all");
 
     stats = createP("Stats");
-    stats.position(750,870);
+    stats.position(310,1280);
     stats.class("stats");
 
     //createCanvas(640, 360);
-    target = "I hate programming.";
+    target = "To be or not to be.";
     popmax = 200;
     mutationRate = 0.01;
 

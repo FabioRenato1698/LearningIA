@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -129,4 +129,217 @@
     <div id="console"></div>
     <div id="graph"></div>
 </body>
-</html>    
+</html>-->
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>LearningIA</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <!--<link href="./stylesheets/fonts/fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Quicksand:400,700|Questrial" rel="stylesheet" />-->
+    <!--<link href="./stylesheets/default.css" rel="stylesheet" type="text/css" media="all" />-->
+    <link href="./stylesheets/fonts.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="stylesheets/simulated.css">
+    <script src="./javascripts/application.js"></script>
+    <script src="./javascripts/console.js"></script>
+    <script src="./javascripts/constants.js"></script>
+    <script src="./javascripts/graph.js"></script>
+    <script src="./javascripts/queens.js"></script>
+    <script src="./javascripts/simulated_annealing.js"></script>
+    <script src="./javascripts/drawing.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    
+    
+
+
+
+    <!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+</head>
+
+<body>
+    <div id="header-wrapper">
+        <div id="header" class="container1">
+            <div id="logo">
+                <h1><a href="#">Simulated Annealing</a></h1>
+            </div>
+            <div id="menu">
+                <ul>
+                    <li class="active"><a href="index.html" accesskey="1" title="">Homepage</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div id="welcome" class="container">
+            <div class="title">
+            </div>
+            <p>O <strong>Simulated Annealing</strong> ou <strong>recozimento simulado</strong> é um método para resolver
+                problemas de otimização irrestritos e limitados. O método modela o processo físico de aquecimento de um
+                material e, em seguida, abaixa lentamente a temperatura para diminuir os defeitos, minimizando a energia
+                do sistema.
+            </p>
+            <p>
+                O processo de recozimento consiste em aquecer um metal até o ponto de fusão e então resfriá-lo lentamente permitindo que suas moléculas alcancem uma configuração de baixa energia e formem uma estrutura cristalina, livre de defeitos.
+            </p>
+            <p>
+                Simulated Annealing estabelece uma conexão entre o comportamento termodinâmico e a busca pelo máximo/mínimo global de um problema de otimização discreto.
+            </p>
+            <p>
+                <hgroup>
+                    <h2>Como funciona um Algoritmo de Simulated Annealing</h2>
+                    <p> 
+                        O processo começa com um valor de <strong>temperatura elevado</strong> e a cada temperatura geram-se soluções até que o <strong>equilíbrio</strong> àquela temperatura seja alcançado. A <strong>temperatura diminui</strong> e o processo prossegue até o <strong>congelamento</strong>. Quanto maior a temperatura, maior a <strong>probabilidade</strong> da aceitação de uma pior solução. Quanto menor a temperatura, menor a probabilidade de aceitação de uma  pior solução.
+
+                    </p>
+                    <p>
+                        O método termina quando a <strong>temperatura se aproxima do zero</strong>. Quando a temperatura é elevada (início do processo), a chance de se aceitar piores soluções é maior. As piores soluções são aceitas para escapar de mínimos locais. A probabilidade de se aceitar piores soluções depende da temperatura. Quanto menor a temperatura, menor a probabilidade de se aceitar piores soluções. Ao final do processo praticamente não se aceita piores soluções.
+                    </p>
+                    </h2>
+                </hgroup>
+            </p>
+            <p>
+                <h3>O Problema das 8 Rainhas</h3>
+                O problema das oito rainhas é o problema de colocar oito rainhas em um tabuleiro de xadrez 8 × 8, de modo que nenhuma delas se ataque (não há duas na mesma linha, coluna ou diagonal). De maneira mais geral, o problema das n rainhas coloca n rainhas em um tabuleiro de xadrez n × n.<br>
+                <h4>Controles do problema</h4>
+                A <strong>initial_temperature</strong> representa a temperatura inicial que o sistema começará<br>
+                O <strong>initial_stabilizer</strong> representa o equilíbrio do sistema, o <strong>cooling_factor</strong> representa o resfriamento da temperatura 
+                ou seja, a diminuição da temperatura para se chegar a <strong>freezing_temperature</strong> que representa o congelamento. O <strong>system energy</strong> representa os conflitos das rainhas no tabuleiro
+                e a <strong>system temperature</strong> representa a temperatura atual que deriva da temperatura inicial - resfriamento. 
+            </p>
+            <div class="container">
+                <div class="board_container">
+                    <table class="board">
+                        <tr>
+                            <td class="white_square"></td>
+                            <td class="black_square"></td>
+                            <td class="white_square"></td>
+                            <td class="black_square"></td>
+                            <td class="white_square"></td>
+                            <td class="black_square"></td>
+                            <td class="white_square"></td>
+                            <td class="black_square"></td>
+                           </tr>
+                        <tr>
+                            <td class="black_square"></td>
+                            <td class="white_square"></td>
+                            <td class="black_square"></td>
+                            <td class="white_square"></td>
+                            <td class="black_square"></td>
+                            <td class="white_square"></td>
+                            <td class="black_square"></td>
+                            <td class="white_square"></td>
+                           </tr>
+                        <tr>
+                            <td class="white_square"></td>
+                            <td class="black_square"></td>
+                            <td class="white_square"></td>
+                            <td class="black_square"></td>
+                            <td class="white_square"></td>
+                            <td class="black_square"></td>
+                            <td class="white_square"></td>
+                            <td class="black_square"></td>
+                           </tr>
+                        <tr>
+                            <td class="black_square"></td>
+                            <td class="white_square"></td>
+                            <td class="black_square"></td>
+                            <td class="white_square"></td>
+                            <td class="black_square"></td>
+                            <td class="white_square"></td>
+                            <td class="black_square"></td>
+                            <td class="white_square"></td>
+                           </tr>
+                        <tr>
+                            <td class="white_square"></td>
+                            <td class="black_square"></td>
+                            <td class="white_square"></td>
+                            <td class="black_square"></td>
+                            <td class="white_square"></td>
+                            <td class="black_square"></td>
+                            <td class="white_square"></td>
+                            <td class="black_square"></td>
+                           </tr>
+                        <tr>
+                            <td class="black_square"></td>
+                            <td class="white_square"></td>
+                            <td class="black_square"></td>
+                            <td class="white_square"></td>
+                            <td class="black_square"></td>
+                            <td class="white_square"></td>
+                            <td class="black_square"></td>
+                            <td class="white_square"></td>
+                           </tr>
+                        <tr>
+                            <td class="white_square"></td>
+                            <td class="black_square"></td>
+                            <td class="white_square"></td>
+                            <td class="black_square"></td>
+                            <td class="white_square"></td>
+                            <td class="black_square"></td>
+                            <td class="white_square"></td>
+                            <td class="black_square"></td>
+                           </tr>
+                        <tr>
+                            <td class="black_square"></td>
+                            <td class="white_square"></td>
+                            <td class="black_square"></td>
+                            <td class="white_square"></td>
+                            <td class="black_square"></td>
+                            <td class="white_square"></td>
+                            <td class="black_square"></td>
+                            <td class="white_square"></td>
+                           </tr>
+                    </table>
+                </div>
+                <div class="controls">
+                    <form>
+                        <label for="initial_temperature">Initial Temperature</label><input type="text" name="initial_temperature" value="35.0" id="initial_temperature">
+                        <label for="initial_stabilizer">Initial Stabilizer</label><input type="text" name="initial_stabilizer" value="35.0" id="initial_stabilizer">
+                        <label for="cooling_factor">Cooling Factor</label><input type="text" name="cooling_factor" value="0.05" id="cooling_factor">
+                        <label for="stabilizing_factor">Stabilizing Factor</label><input type="text" name="stabilizing_factor" value="1.005" id="stabilizing_factor">
+                        <label for="freezing_temperature">Freezing Temperature</label><input type="text" name="freezing_temperature" value="0.0" id="freezing_temperature">
+                    </form>
+                    <p>
+                        <input type="button" value="Solve it!" onclick="App.Start();" />
+                    </p>                
+                </div>
+            </div>
+            <div id="console"></div>
+            <div id="graph"></div>
+
+
+            
+
+
+        </div>
+
+    </div>
+    </div>
+    <div id="footer">
+        <div class="container1">
+
+            <div class="fbox1">
+                <span class="icon icon-map-marker"></span>
+                <span>1234 Avenida Dom Carlos #789
+                    <br />Santos 00000</span>
+            </div>
+            <div class="fbox1">
+                <span class="icon icon-phone"></span>
+                <span>
+                    Telephone: +351 900 123 4657
+                </span>
+            </div>
+            <div class="fbox1">
+                <span class="icon icon-envelope"></span>
+                <span>learningia@business.com</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
