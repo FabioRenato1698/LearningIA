@@ -9,11 +9,11 @@
     {
       margin: 0px;
       padding: 0px;
-      background: #64ABD1;
       font-family: 'Questrial', sans-serif;
       font-size: 12pt;
       color: rgba(0,0,0,.6);
     }
+    
   
     .stats, .all, .best {
       font-family: "Courier";
@@ -42,6 +42,9 @@
     h3 {
       background-color: rgb(9, 11, 143);
       color: white;
+      text-align: center;
+      padding-bottom: 10px;
+      padding-left: 15px;
     }
     
     h1, h2
@@ -67,7 +70,12 @@
     {
       line-height: 180%;
     }
-    
+
+    .anneal-region {
+      background-color: hsl(303, 100%, 50%);
+      margin-top: 200px;
+    }
+
     strong
     {
     }
@@ -546,6 +554,7 @@
       padding: 5em 0em;
       background: #E3F0F7;
       text-align: center;
+      margin-top: 35px;
     }
   
   

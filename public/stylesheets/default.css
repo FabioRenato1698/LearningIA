@@ -684,6 +684,7 @@
 		padding-top: 1em;
 		border-top: 1px solid rgba(0,0,0,0.2);
 		text-align: center;
+	
 	}
 	
 	#three-column h2
@@ -697,7 +698,7 @@
 	{
 		position: relative;
 		display: block;
-		margin: 0px auto 0.80em auto;
+		margin: 10px auto 0.80em auto;
 		background: none;
 		line-height: 150px;
 		font-size: 4em;
@@ -716,7 +717,7 @@
 	{
 		float: left;
 		width: 320px;
-		padding: 80px 40px 80px 40px;
+		padding: 40px 140px ;
 	}
 	
 	#three-column .title
